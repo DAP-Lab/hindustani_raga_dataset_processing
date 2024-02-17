@@ -88,7 +88,7 @@ For every singer, we also provide a tonic file containing the tonic for the sing
 |**Video Metadata**|Format|MP4|
 | - | - | - |
 ||Resolution|1920\*1080|
-||Video Coded|H.264 High L4.0|
+||Video Codec|H.264 High L4.0|
 ||FPS|25 for singers AG,CC,SCh. 24 for others|
 
 ## Processing Flowcharts
