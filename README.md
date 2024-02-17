@@ -37,7 +37,7 @@ This is the code repository for multimodal processing of Hindustani Raga music. 
 | 06_multimodal_processing   | This is the location of code for the computation of velocity and acceleration and combination of audio and video processing output |
 | 07_multimodal_processing_output | This is where the masterfile (output of above processing) is stored. |
 
-IMPORTANT NOTE:-  We provide the output for audio processing, video processing and master files for one sample recording - AK_Pakad_Bag in this repository. This is ONLY for the user to be acquainted with the data structure. Either download the final master files from [Using Processed Master Files](#using-processed-master-files) or replicate the processing by following the steps in [Replicating the Processing of This Repository](#replicating-the-processing-of-this-repository)
+**IMPORTANT NOTE** :-  We provide the output for audio processing, video processing and master files for one sample recording - AK_Pakad_Bag in this repository. This is ONLY for the user to be acquainted with the data structure. Either download the final master files from [Using Processed Master Files](#using-processed-master-files) or replicate the processing by following the steps in [Replicating the Processing of This Repository](#replicating-the-processing-of-this-repository)
 
 
 ## Dataset Details
@@ -340,31 +340,28 @@ Please the data in the corresponding folders to the corresponding directory here
 | 04_openpose_output        | 01_openpose_output                     |
 | 05_videopose_output       | 01_videopose_output               |
 
+You need to use either the openpose output or the videopose output depending on the setting in the next step.
 
 ### Data Processing
 
 1\. Run the following. Set the CAMERA\_VIEWS variable to be '2D' or '3D'. The default is 3D
 
 ```
-export ROOT\_DIR=`echo $PWD` export CAMERA\_VIEWS=3D
-cd ${ROOT\_DIR}/00\_data/00\_orig\_video
-./download\_mp4.sh
+export ROOT\_DIR=`echo $PWD`
+export CAMERA\_VIEWS=3D
 ```
 
-Ensure download\_mp4.sh has execute permission. Note that download\_mp4.sh only downloads one sample recording (AK\_Pakad\_Bag) - the output for that sample file is provided in this repository for reference.
+**If you are processing with CAMERA\_VIEWS=2D then follow the steps 2a**:-
 
-Rest of the files you need to download from the links below.
-
-**If you are processing with CAMERA\_VIEWS=2D then follow the steps 2a-4a**:-
-
-2a. Download all the recordings from <<INSERTLINK>>. This link has only the front view recordings. 3a. Save the recordings in 00\_data/00\_orig\_video 4a. Download the json files from <<INSERTLINK>>and save them in 01\_openpose\_output. This will be downloaded as one tar.json.gz file per recording. *Alternatively*, create the Openpose json files using the instructions for
+2a. Download the files into 01_openpose_output
+*Alternatively*, create the Openpose json files using the instructions for
 
 [Openpose Installation ](https://github.com/CMU-Perceptual-Computing-Lab/openpose#installation)
 [Openpose Quick Start Overview](https://github.com/CMU-Perceptual-Computing-Lab/openpose#quick-start-overview)
 
-These two steps should create a json file per frame per video. Store the json files in 01\_json\_files. **If you are processing with CAMERA\_VIEWS=3D then follow the steps 2b-4b**:-
+**If you are processing with CAMERA\_VIEWS=3D then follow the steps 2b**:-
 
-2b. Download all the recordings from <<INSERTLINK>>. This link has the recordings for all 3 views 3b. Save the recordings in 00\_data/00\_orig\_video 4b. Download the output files of VideoPose 3D from <<INSERTLINK>>and save them in 01\_videopose\_output.
+2b. Download the files into 01_videopose_output
 
 *Alternatively*, create the 3D output for VideoPose3D by following the instructions in [VideoPose3D: Inference in the Wild.](https://github.com/facebookresearch/VideoPose3D/blob/main/INFERENCE.md) Note that each recording with the detections of 3 views should be made into a separate custom dataset. 
 
@@ -392,8 +389,8 @@ Ensure the .sh files have execute (+x) permission for user in question.
 
 This process will create the gesture coordinates for each keypoint. There are three output folders in this processing:-
 
-1) 00\_keypoints\_non\_normalized - this has one file per recording having all 25 Openpose keypoints in pixel coordinates at frame rate
-2) 01\_keypoints\_all - this has one file per recording having all 25 Openpose keypoints followed by z-score normalization at 10ms intervals
+1) 00\_keypoints\_non\_normalized - this has one file per recording having all keypoints in pixel coordinates at frame rate
+2) 01\_keypoints\_all - this has one file per recording having all keypoints followed by z-score normalization at 10ms intervals
 3) 02\_keypoints\_selected - this has one file per recording having only the keypoints for wrist and elbow of both hands at 10ms intervals. This is the only data used in the next step
 
 5\.**Multimodal Processing** - Run the following
