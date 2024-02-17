@@ -195,7 +195,7 @@ The interpolated pitch contour will be saved as a csv file in OUTPUT\_FOLDER
 
 ### Part 1: From keypoints to time series
 
-1. We use OpenPose with front view camera only for 2D keypoint estimation and VideoPose3D with 3D keypoint estimation. The list of identified key points using the two methods are different and are tabulated below. This repository uses the output of OpenPose / VideoPose3D on the videos as input to the processing. This data is provided in << INSERT LINK >>. This data is at frame rate (25 FPS for Durham singers, 24 FPS for Pune Singers).
+1. We use OpenPose with front view camera only for 2D keypoint estimation and VideoPose3D with 3D keypoint estimation. The list of identified key points using the two methods are different and are tabulated below. This repository uses the output of OpenPose / VideoPose3D on the videos as input to the processing. This data is at frame rate (25 FPS for Durham singers, 24 FPS for Pune Singers).
 
 | KeypointName | OpenPose (2D) | VideoPose3D | VideoPose3D - has depth |
 |--------------|---------------|-------------|------------------------|
