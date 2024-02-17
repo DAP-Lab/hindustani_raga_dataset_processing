@@ -28,7 +28,7 @@ This is the code repository for multimodal processing of Hindustani Raga music. 
 | Folder Name                | Description |
 | -------------------------- | ----------- |
 | 00_data                    | This is the data folder containing the original videos, text file for each singer with the start and stop times for the actual singing in each video and the singer specific tonic. |
-| 01_json_files              | This is the output of 2D coordinates from the OpenPose processing using the front view only. |
+| 01_openpose_output              | This is the output of 2D coordinates from the OpenPose processing using the front view only. |
 | 01_videopose_output        | This is the output of the 3D coordinates from VideoPose3D library. This uses all the 3 views of the recording. |
 | 02_audio_processing        | This has the code for the processing of the audio |
 | 03_audio_processing_output | This is where the audio processing code places its output |
