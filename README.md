@@ -259,7 +259,7 @@ We take the Euclidean norm of the individual components of acceleration and refe
 
 ## Using processed master files
 
-If you wish to access directly the final processed master files - one per singer - please download the master files from [Data Archiving Project](https://iitbacin-my.sharepoint.com/:f:/g/personal/214077004_iitb_ac_in/Ejhb_G5MRDZErnGJ_bq-zmcBrfjlgPxJ16uEZjBwEvtOyg?e=xrDV1D)
+If you wish to access directly the final processed master files - one per singer - please download the master files from [Data Archiving Project](http://tinyurl.com/3ykadrm5)
 
 Below is a sample of the master file. Only columns for right wrist are shown here. There would be similar columns for left wrist and both elbows.
 
@@ -330,7 +330,7 @@ pip install -r requirements.txt
 ```
 ### Downloading the data
 
-Download the data from [Data Archiving Project](https://iitbacin-my.sharepoint.com/:f:/g/personal/214077004_iitb_ac_in/Ejhb_G5MRDZErnGJ_bq-zmcBrfjlgPxJ16uEZjBwEvtOyg?e=xrDV1D)
+Download the data from [Data Archiving Project](http://tinyurl.com/3ykadrm5)
 
 Please the data in the corresponding folders to the corresponding directory here.
 
