@@ -9,7 +9,7 @@ elif [ "$CAMERA_VIEWS" != "3D" ] && [ "$CAMERA_VIEWS" != "2D" ]; then
 fi
 if [ "$CAMERA_VIEWS" = "2D" ]; then
 	json_dir='../01_json_files'
-	tar_extracted_directory='../01_json_files/'
+	tar_extracted_directory='../01_openpose_output/'
 	output_directory='../05_video_processing_output/'
 
 	mkdir -p ${tar_extracted_directory}
