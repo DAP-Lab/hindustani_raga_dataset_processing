@@ -367,8 +367,8 @@ export CAMERA\_VIEWS=3D
 
 3.  **Audio processing** - Instructions to run the pitch contour extraction script:
 
-1) Place the source separated audio in 00_data/01_source_separated_audio
-2) Run the script using the command:
+- Place the source separated audio in 00_data/01_source_separated_audio
+- Run the script using the command:
 ```
 cd ${ROOT\_DIR}/02\_audio\_processing
 ./process\_audio.sh
