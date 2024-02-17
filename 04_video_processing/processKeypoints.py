@@ -123,7 +123,7 @@ class ProcessKeyPoints3D(object):
 class ProcessKeyPoints2D(object):
     def __init__(self,json_files_dir,output_csv_root):
         self.setup(json_files_dir,output_csv_root)
-        
+       
 
     def run(self,each_directory):
         # list_of_directories=[os.path.join(self.json_files_dir,x) for x in os.listdir(self.json_files_dir) if not re.search('zip',x)]
@@ -361,15 +361,21 @@ def main():
         #depth_keypoints_directory='./'
         list_of_recordings=sorted([p for p in os.listdir(start_directory) if os.path.isdir(os.path.join(start_directory,p))])
     for each_recording in list_of_recordings:
-        if type_of_processing=='3D':
-            output_dir_pose=os.path.join(output_dir,'./02_keypoints_selected')
-            output_dir_all=os.path.join(output_dir,'./01_keypoints_all')
-            output_dir_all_non_normalized=os.path.join(output_dir,'./00_keypoints_non_normalized')
-            
-            os.makedirs(output_dir_pose,exist_ok=True)
-            os.makedirs(output_dir_all,exist_ok=True)
-            os.makedirs(output_dir_all_non_normalized,exist_ok=True)
+        output_dir_pose=os.path.join(output_dir,'./02_keypoints_selected')
+        output_dir_all=os.path.join(output_dir,'./01_keypoints_all')
+        output_dir_all_non_normalized=os.path.join(output_dir,'./00_keypoints_non_normalized')
+        os.makedirs(output_dir_pose,exist_ok=True)
+        os.makedirs(output_dir_all,exist_ok=True)
+        os.makedirs(output_dir_all_non_normalized,exist_ok=True)
 
+        output_file_pose=os.path.join(output_dir_pose,each_recording+'_pose.csv')
+        output_file_all_non_normalized=os.path.join(output_dir_all_non_normalized,each_recording+'_all_nonnormalized.csv')
+        output_file_all=os.path.join(output_dir_all,each_recording+'_all.csv')
+
+        if os.path.isfile(output_file_pose):
+            print (each_recording," has been processed ... skipping")
+            continue
+        if type_of_processing=='3D':
             processKeyPoints3D=ProcessKeyPoints3D(start_directory,front_keypoints_directory,depth_keypoints_directory,output_dir)
 
             print (front_keypoints_directory_full)            
@@ -383,13 +389,18 @@ def main():
             this_keypoint_df,keypoint_list=processKeyPoints3D.extract_keypoints(each_recording,fps)
         else:
             processKeyPoints2D=ProcessKeyPoints2D(json_files_dir='../01_json_files',output_csv_root=output_dir)
+            dummy_setup=ProcessKeyPoints3D('.','.','.','.')
+
             this_keypoint_df,keypoint_list=processKeyPoints2D.run(each_recording)        
 
         #print (keypoint_list)
-        interpolated_df=do_interpolate_and_lpf(this_keypoint_df,keypoint_list)
-        output_file_pose=os.path.join(output_dir_pose,each_recording+'_pose.csv')
-        output_file_all_non_normalized=os.path.join(output_dir_all_non_normalized,each_recording+'_all_nonnormalized.csv')
-        output_file_all=os.path.join(output_dir_all,each_recording+'_all.csv')
+        this_keypoint_df=this_keypoint_df.iloc[:-1]
+        try:
+            interpolated_df=do_interpolate_and_lpf(this_keypoint_df,keypoint_list)
+        except Exception as e:
+            print ("Error ",str(e)," for ",each_recording)
+            continue
+        
 
         interpolated_df.to_csv(output_file_all_non_normalized,index=False)
         output_pd_resampled=resample_dataframe(interpolated_df)
@@ -397,8 +408,11 @@ def main():
         #print (normalized_keypoints.columns)
         #print (type(normalized_keypoints))
         normalized_keypoints.to_csv(output_file_all,index=False)
-        
-        to_keep_coord_columns=processKeyPoints3D.to_keep_coord_columns
+        if type_of_processing=='3D':
+            to_keep_coord_columns=processKeyPoints3D.to_keep_coord_columns
+        else:
+            to_keep_coord_columns=dummy_setup.to_keep_coord_columns
+            to_keep_coord_columns=[p for p in to_keep_coord_columns if not re.search('_z',p)]
         #print (to_keep_coord_columns)
         final_df_to_keep=normalized_keypoints[to_keep_coord_columns]
         final_df_to_keep.to_csv(output_file_pose,index=False)

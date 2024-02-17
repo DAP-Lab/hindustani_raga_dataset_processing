@@ -9,13 +9,17 @@
 #
 #
 
-SOURCE_DIR="../00_data/03_audio_cropped"
 TARGET_DIR="../03_audio_processing_output"
 SPLIT_AUDIO_DIRECTORY=${TARGET_DIR}/"01_source_separated_audio"
 PITCH_CONTOUR_DIRECTORY=${TARGET_DIR}/"02_pitch_contour_dir"
 USE_SINGER_SPECIFIC_TONICS="Y"
 USE_PARSELMOUTH_ALL="Y"
 NORMALIZE_PITCH_CONTOURS="Y"
+
+for each_dir in `ls $SPLIT_AUDIO_DIRECTORY`
+do
+    mv ${SPLIT_AUDIO_DIRECTORY}/${each_dir}/* ${SPLIT_AUDIO_DIRECTORY}
+done
 
 if [[ $USE_SINGER_SPECIFIC_TONICS == "Y" ]]
 then
