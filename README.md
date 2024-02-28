@@ -35,7 +35,7 @@ This is the code repository for multimodal processing of Hindustani Raga music. 
 | 04_video_processing        | This is the location for the video processing code (SavGol filtering, 10 ms resampling, and Z-score normalization) which converts the output of either OpenPose or VideoPose3D into time series at 10ms intervals |
 | 05_video_processing_output | This is where the video processing code places its output |
 | 06_multimodal_processing   | This is the location of code for the computation of velocity and acceleration and combination of audio and video processing output |
-| 07_multimodal_processing_output | This is where the masterfile (output of above processing) is stored. |
+| 07_multimodal_processing_output | This is where the masterfile (output of above multimodal processing) is stored. |
 
 **IMPORTANT NOTE** :-  We provide the output for audio processing, video processing and master files for one sample recording - AK_Pakad_Bag in this repository. This is ONLY for the user to be acquainted with the data structure. Either download the final master files from [Using Processed Master Files](#using-processed-master-files) or replicate the processing by following the steps in [Replicating the Processing of This Repository](#replicating-the-processing-of-this-repository)
 
