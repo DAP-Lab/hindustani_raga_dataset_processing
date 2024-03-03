@@ -349,8 +349,8 @@ You need to use either the openpose output or the videopose output depending on 
 1\. Run the following. Set the CAMERA\_VIEWS variable to be '2D' or '3D'. The default is 3D
 
 ```
-export ROOT\_DIR=`echo $PWD`
-export CAMERA\_VIEWS=3D
+export ROOT_DIR=`echo $PWD`
+export CAMERA_VIEWS=3D
 ```
 
 **If you are processing with CAMERA\_VIEWS=2D then follow the steps 2a**:-
@@ -372,8 +372,8 @@ export CAMERA\_VIEWS=3D
 - Place the source separated audio in 00_data/01_source_separated_audio
 - Run the script using the command:
 ```
-cd ${ROOT\_DIR}/02\_audio\_processing
-./process\_audio.sh
+cd ${ROOT_DIR}/02_audio_processing
+./process_audio.sh
 ```
 
 Ensure the .sh files have execute (+x) permission for user in question.
@@ -383,8 +383,8 @@ The output of this process will create the pitch contours in cents at 10 ms inte
 4\. **Video Processing** - Run the following. This code will use the CAMERA\_VIEWS variable.
 
 ```
-cd ${ROOT\_DIR}/04\_video\_processing 
-./run\_gesture\_keypoint\_extraction.sh
+cd ${ROOT_DIR}/04_video_processing 
+./run_gesture_keypoint_extraction.sh
 ```
 
 Ensure the .sh files have execute (+x) permission for user in question.
