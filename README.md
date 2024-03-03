@@ -330,7 +330,7 @@ pip install -r requirements.txt
 ```
 ### Downloading the data
 
-You can download the videos for all singers and all views from [Download Videos](https://tinyurl.com/bdneucxu).
+You can download the videos for all singers and all views from [Download Videos](https://tinyurl.com/bdneucxu). Note that you do NOT need the video mp4 files for the rest of the processing in this repository because we provide the pre-processed source separated audio and openpose/videopose output in the following link.
 
 Download the pre-processed audio and video data from [Data Archiving Project](http://tinyurl.com/3ykadrm5)
 
@@ -342,7 +342,7 @@ Please the data in the corresponding folders to the corresponding directory here
 | 04_openpose_output        | 01_openpose_output                     |
 | 05_videopose_output       | 01_videopose_output               |
 
-You need to use either the openpose output or the videopose output depending on the setting in the next step.
+You need to use EITHER the openpose output OR the videopose output depending on the setting in the next step.
 
 ### Data Processing
 
