@@ -397,8 +397,8 @@ This process will create the gesture coordinates for each keypoint. There are th
 
 5\.**Multimodal Processing** - Run the following
 ```
-cd ${ROOT\_DIR}/06\_multimodal\_processing
-python process\_multimodal\_data.py
+cd ${ROOT_DIR}/06_multimodal_processing
+python process_multimodal_data.py
 ```
 
 This process does the following:-
