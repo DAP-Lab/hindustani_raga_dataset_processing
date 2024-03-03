@@ -334,7 +334,7 @@ You can download the videos for all singers and all views from [Download Videos]
 
 Download the pre-processed audio and video data from [Data Archiving Project](http://tinyurl.com/3ykadrm5)
 
-Please the data in the corresponding folders to the corresponding directory here.
+Please place the data in the corresponding folders to the corresponding directory here.
 
 | Folder Name               | Directory to be placed in          |
 |---------------------------|------------------------------------|
