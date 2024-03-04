@@ -18,9 +18,9 @@
   - [Data Processing](#data-processing)
 
 
-This is the code repository for multimodal processing of Hindustani Raga music. It covers the chain of processing as well as intermediate outputs for the following overall task: Set of Videos (mp4) of raga alap (or pakad) by a singer across 9 ragas are processed to obtain a CSV "masterfile" containing the time series (sampled at 10 ms intervals) of singer pitch (cents with reference to singer tonic), gesture (3d position, velocity, acceleration) from selected keypoints (elbow, wrist). We eventually present the following files (one each per-singer): 
-- Masterfile: A csv file containing processed pitch and gesture contours for that singer
-- Offsets information: A text file containing start and end timestamps, to link video timestamps with masterfile timestamps (which may be different due to the removal of singer's introduction from the audio extract).
+This is the code repository for multimodal processing of Hindustani Raga music. It covers the chain of processing as well as intermediate outputs for the following overall task:  Video (mp4) of raga alap (or pakad) by a singer is processed to obtain a CSV "masterfile" containing the time series (sampled at 10 ms intervals) of singer pitch (cents with reference to singer tonic), gesture (3d position, velocity, acceleration) from selected keypoints (elbow, wrist). We use this code on our full dataset of 11 singers singing alap/pakad pieces in each of 9 ragas to present the following processed data files (one of each per singer): 
+- Masterfile: A csv file containing processed pitch and gesture contours for that singer across all the pieces sung by the singer
+- Offsets information: A text file containing start and end timestamps, to link each original video's timestamps with masterfile timestamps (which may be different due to the deletion of singer's spoken introduction from the audio extract).
 - Singer tonic: A text file containing the singer's tonic in Hz
 
 ## Summary of Contents of repository
