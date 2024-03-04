@@ -18,7 +18,7 @@
   - [Data Processing](#data-processing)
 
 
-This is the code repository for multimodal processing of Hindustani Raga music. It covers the chain of processing as well as intermediate outputs for the following overall task:  Video (mp4) of raga alap (or pakad) by a singer is processed to obtain a CSV "masterfile" containing the time series (sampled at 10 ms intervals) of singer pitch (cents with reference to singer tonic), gesture (3d position, velocity, acceleration) from selected keypoints (elbow, wrist). We used this code on our full video dataset of 11 singers singing alap/pakad pieces in each of 9 ragas to generate the following processed data files (one of each per singer): 
+This is the code repository for multimodal processing of Hindustani Raga music. It covers the chain of processing as well as intermediate outputs for the following overall task:  Video (mp4) of raga alap (or pakad) performed by a singer is processed to obtain a CSV "masterfile" containing the time series (sampled at 10 ms intervals) of singer pitch (cents with reference to singer tonic), gesture (3d position, velocity, acceleration) from selected keypoints (elbow, wrist). We used this code on our full video dataset of 11 singers singing alap/pakad pieces in each of 9 ragas to generate the following processed data files (one of each per singer): 
 - Masterfile: A csv file containing processed pitch and gesture contours for that singer across all the pieces sung by the singer
 - Offsets information: A text file containing start and end timestamps, to link each original video's timestamps with masterfile timestamps (which may be different due to the deletion of singer's spoken introduction from the audio extract).
 - Singer tonic: A text file containing the singer's tonic in Hz
@@ -27,7 +27,7 @@ This is the code repository for multimodal processing of Hindustani Raga music. 
 
 | Folder Name                | Description |
 | -------------------------- | ----------- |
-| 00_data                    | This is the data folder meant to hold the original video(s), text file for each singer with the start and stop times for the actual singing in each video and the singer specific tonic. |
+| 00_data                    | This is the data folder meant to hold the original video(s), text files for each singer with the start and stop times for the actual singing in each video and the singer specific tonic. |
 | 01_openpose_output              | This is the output of 2D coordinates from the OpenPose processing using the front view only. |
 | 01_videopose_output        | This is the output of the 3D coordinates from VideoPose3D library. This uses all the 3 views of the recording. |
 | 02_audio_processing        | This has the code for the processing of the already source-separated audio |
@@ -104,9 +104,9 @@ The repository can process both single-view and multiple-view recordings. The fo
 
 ### Part 1: From Raw Audio to Source Separated Audio
 
-For Durham singers (AG, CC, SCh) we used [**Spleeter Source separation**](https://research.deezer.com/projects/spleeter.html) (4 stem model) 
+For Pune singers (AK, AP, MG, MP, NM, RV, SM, SS), we used [**Spleeter Source separation**](https://research.deezer.com/projects/spleeter.html) (4 stem model) 
 
-For Pune singers (AK, AP, MG, MP, NM, RV, SM, SS) we used [**Audacity Noise Removal**](https://manual.audacityteam.org/man/noise_reduction.html) (called ANR hereupon) – the parameters are mentioned in the following explanation
+For Durham singers (AG, CC, SCh) we used [**Audacity Noise Removal**](https://manual.audacityteam.org/man/noise_reduction.html) (called ANR hereupon) – the parameters are mentioned in the following explanation
 
 This choice was made based on some trial and error. We had three choices for the source separation:
 
@@ -114,13 +114,13 @@ This choice was made based on some trial and error. We had three choices for the
 1) Using ANR only
 1) Using ANR followed by Spleeter (ANR+Spleeter)
 
-The drawback of using Spleeter was that some portion of the vocals was getting lost because of aggressive source separation. The drawback of using ANR was that it was not as effective as Spleeter in removing the accompaniment (Tanpura). So we had a tradeoff.
+The drawback of using Spleeter was that some portion of the vocals was getting lost because of the aggressiveness of the source separation. The drawback of using ANR was that it was not as effective as Spleeter in removing the accompaniment (Tanpura). So we had to make the best of the tradeoff.
 
 We noticed the following:
 
 **Pune Singers:**
 
-For SM, the voice was loud enough so ANR was working well. But it was not working better than Spleeter. For other Pune Singers ANR is working worse than Spleeter. So for new singers, using Spleeter only was the best. Audacity noise removal is not improving, irrespective of whether we use Spleeter or not. Because of the loud tanpura, we need the aggressive splitting of Spleeter to get the separated vocals.
+For SM, the voice was loud enough so ANR was working well. But it was not working better than Spleeter. For other Pune Singers ANR is working worse than Spleeter. So for the Pune singers, using Spleeter only was the best. Audacity noise removal is not helpful, irrespective of whether we use Spleeter or not. Because of the loud tanpura, we need the aggressive splitting of Spleeter to get the separated vocals.
 
 **Durham Singers:**
 
