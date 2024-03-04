@@ -308,8 +308,7 @@ of the 23rd International Society for Music Information Retrieval Conference,ISM
 
 The full version of this dataset has been used in 
 
-1. S. M. Nadkarni, S. Roychowdhury, P. Rao, and M. Clayton, “Exploring the correspondence of melodic contour with gesture in raga alap singing,” in Pro-
-ceedings of the 24th International Society for Music Information Retrieval Conference, ISMIR, Milan, Italy 2023
+1. S. M. Nadkarni, S. Roychowdhury, P. Rao, and M. Clayton, “Exploring the correspondence of melodic contour with gesture in raga alap singing,” in Proceedings of the 24th International Society for Music Information Retrieval Conference, ISMIR, Milan, Italy 2023
 
 ## Replicating the processing of this repository
 
