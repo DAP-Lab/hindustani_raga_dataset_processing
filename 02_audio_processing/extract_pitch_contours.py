@@ -18,10 +18,10 @@ import time
 warnings.filterwarnings("ignore")
 
 
-INPUT_FOLDER = r'../03_audio_processing_output/01_source_separated_audio'
-OUTPUT_FOLDER = r'../03_audio_processing_output/02_pitch_contour_dir/'
-if len(sys.argv)==2:
-    FILE=sys.argv[1]
+INPUT_FOLDER = r'../03_audio_processing_data/01_source_separated_audio'
+OUTPUT_FOLDER = r'../03_audio_processing_data/02_pitch_contour_dir/'
+if len(sys.argv)!=1:
+    FILE=os.path.basename(sys.argv[1])
 else:
     FILE = 'AG_Pakad_Bag.wav'
 
@@ -162,7 +162,6 @@ def get_pcdf_ipcdf(file, plot_ipcdf=False, input_folder = INPUT_FOLDER):
 	'''
 	filepath = f'{input_folder}/{file}'
 	singer = file.split('_')[0]
-
 	if singer in ['AP','RV','SM']:
 		tonic = 220.0 #female
 		kwargs = {'pitch_floor':150, 'pitch_ceiling':800, 'silence_threshold':0.0001,'voicing_threshold':0.0001, 'octave_cost':0.1, 'octave_jump_cost':20, 'voiced_unvoiced_cost':10}
@@ -201,7 +200,7 @@ def get_pcdf_ipcdf(file, plot_ipcdf=False, input_folder = INPUT_FOLDER):
 
 
 
-
+print (FILE,INPUT_FOLDER)
 t1=datetime.datetime.now()
 # Driver code
 pcdf, ipcdf = get_pcdf_ipcdf(file=FILE,input_folder = INPUT_FOLDER)

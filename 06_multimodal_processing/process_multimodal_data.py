@@ -12,7 +12,7 @@ import os
 import matplotlib.ticker as ticker
 
 pose_keypoints_dir='../05_video_processing_output/02_keypoints_selected/'
-pitch_dir='../03_audio_processing_output/02_pitch_contour_dir'
+pitch_dir='../03_audio_processing_data/02_pitch_contour_dir'
 
 start_end_time_directory='../00_data/01_start_and_stop_times'
 

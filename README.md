@@ -31,7 +31,7 @@ This is the code repository for multimodal processing of Hindustani Raga music. 
 | 01_openpose_output              | This is the output of 2D coordinates from the OpenPose processing using the front view only. |
 | 01_videopose_output        | This is the output of the 3D coordinates from VideoPose3D library. This uses all the 3 views of the recording. |
 | 02_audio_processing        | This has the code for the processing of the already source-separated audio |
-| 03_audio_processing_output | This is where the audio processing code places its output |
+| 03_audio_processing_data | This is where the audio processing code places its output |
 | 04_video_processing        | This is the location for the video processing code (SavGol filtering, 10 ms resampling, and Z-score normalization) which converts the output of either OpenPose or VideoPose3D into time series at 10ms intervals |
 | 05_video_processing_output | This is where the video processing code places its output |
 | 06_multimodal_processing   | This is the location of code for the computation of velocity and acceleration and combination of audio and video processing output |
@@ -338,7 +338,7 @@ Please place the data in the corresponding folders to the corresponding director
 
 | Folder Name               | Directory to be placed in          |
 |---------------------------|------------------------------------|
-| 03_Source_Separated_Audio | 03_audio_processing_output/01_source_separated_audio |
+| 03_Source_Separated_Audio | 03_audio_processing_data/01_source_separated_audio |
 | 04_openpose_output        | 01_openpose_output                     |
 | 05_videopose_output       | 01_videopose_output               |
 

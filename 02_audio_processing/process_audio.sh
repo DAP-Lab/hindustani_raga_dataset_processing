@@ -9,14 +9,14 @@
 #
 #
 
-TARGET_DIR="../03_audio_processing_output"
+TARGET_DIR="../03_audio_processing_data"
 SPLIT_AUDIO_DIRECTORY=${TARGET_DIR}/"01_source_separated_audio"
 PITCH_CONTOUR_DIRECTORY=${TARGET_DIR}/"02_pitch_contour_dir"
 USE_SINGER_SPECIFIC_TONICS="Y"
 USE_PARSELMOUTH_ALL="Y"
 NORMALIZE_PITCH_CONTOURS="Y"
 
-for each_dir in `ls $SPLIT_AUDIO_DIRECTORY`
+for each_dir in `ls -l $SPLIT_AUDIO_DIRECTORY | grep ^d | awk '{print $9}'`
 do
     mv ${SPLIT_AUDIO_DIRECTORY}/${each_dir}/* ${SPLIT_AUDIO_DIRECTORY}
 done
@@ -29,6 +29,7 @@ then
         echo "Running for $each_file"
         inputfile=${SPLIT_AUDIO_DIRECTORY}/$each_file
         singer_name=`basename $each_file | awk -F"_" '{print $1}'`
+        echo "Singer is ${singer_name}"
         tonic_file_name=${singer_name}_tonic.txt
         tonicfilename_full_path=$TONIC_FOLDER/$tonic_file_name
         if [[ $NORMALIZE_PITCH_CONTOURS == "Y" ]]
