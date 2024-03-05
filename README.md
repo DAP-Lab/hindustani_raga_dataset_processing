@@ -289,7 +289,7 @@ The master files have the following columns:-
 
 |**Content**|**No. of cols**|**Column names and Description**|
 | - | - | - |
-|Filename|1|**filename** <Singer\_Name>\_<RecordingType>\_<Raga>e.g. AK\_Pakad\_Bag|
+|Filename|1|**filename** `<Singer\_Name>\_<RecordingType>\_<Raga>`e.g. AK\_Pakad\_Bag|
 |Time|1|**time** in seconds starting at offset start time|
 |Pitch|1|**pitch** in cents|
 |Position coordinates|3\*4|**<JointName>\_x, <JointName>\_y, <JointName>\_z** for joint position for each of the joints. \_z values are 0 for the 2D master file|
