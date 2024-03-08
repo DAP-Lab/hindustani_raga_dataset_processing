@@ -322,7 +322,7 @@ def resample_dataframe(input_df):
         this_series=input_df[each_column]
         if this_series.isnull().all():
             continue
-        resampled=signal.resample(this_series,num_samples) 
+        resampled=signal.resample(this_series,num_samples,window='hamming') 
         resampled_series=pd.Series(resampled) 
         output_series_list.append(resampled_series)
         output_names_list.append(each_column) 
