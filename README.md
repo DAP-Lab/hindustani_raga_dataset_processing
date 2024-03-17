@@ -95,7 +95,7 @@ For every singer, we also provide a tonic file containing the tonic for the sing
 
 The repository can process both single-view and multiple-view recordings. The following diagrams show the processes for 2D and 3D. We use [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) for keypoint estimation from front view only and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D) for keypoint extraction from 3 views.
 
-| ![Processing with front view camera only](Process2D.png) | ![Processing with all 3 view cameras](Process2D.png) |
+| ![Processing with front view camera only](Process2D.png) | ![Processing with all 3 view cameras](Process3D.png) |
 |:---------------------------------------------------------:|:----------------------------------------------------:|
 | Processing with front view camera only                    | Processing with all 3 view cameras                   |
 
