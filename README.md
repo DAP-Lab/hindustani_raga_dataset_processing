@@ -18,9 +18,9 @@
   - [Data Processing](#data-processing)
 
 
-This is the code repository for multimodal processing of Hindustani Raga music. It covers the chain of processing as well as intermediate outputs for the following overall task:  Video (mp4) of raga alap (or pakad) performed by a singer is processed to obtain a CSV "masterfile" containing the time series (sampled at 10 ms intervals) of singer pitch (cents with reference to singer tonic), gesture (3d position, velocity, acceleration) from selected keypoints (elbow, wrist). We used this code on our full video dataset of 11 singers singing alap/pakad pieces in each of 9 ragas to generate the following processed data files (one of each per singer): 
-- Masterfile: A csv file containing processed pitch and gesture contours for that singer across all the pieces sung by the singer
-- Offsets information: A text file containing start and end timestamps, to link each original video's timestamps with masterfile timestamps (which may be different due to the deletion of singer's spoken introduction from the audio extract).
+This is the code repository for multimodal processing of Hindustani Raga music. It covers the chain of processing as well as intermediate outputs for the following overall task:  Video (mp4) of raga alap (or pakad) performed by a singer is processed to obtain a CSV "masterfile" containing the time series (sampled at 10 ms intervals) of singer pitch (cents with reference to singer tonic), gesture (3d position, velocity, acceleration) from selected keypoints (elbow, wrist). We used this code on our full video dataset of 11 singers singing alap/pakad pieces in each of 9 ragas, each performance having 3 camera views, to generate the following processed data files (one of each file type per singer): 
+- Masterfile: A csv file containing the computed pitch and gesture contours for that singer across all the pieces sung by the singer
+- Offsets information: A text file containing start and end timestamps. This information helps to associate each original video's timestamps with corresponding masterfile timestamps (which may be different due to the deletion of singer's spoken introduction from the audio extract).
 - Singer tonic: A text file containing the singer's tonic in Hz
 
 ## Summary of Contents of repository
