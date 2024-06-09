@@ -42,7 +42,7 @@ This is the code repository for multimodal processing of Hindustani Raga music. 
 
 ## Dataset Details
 
-The dataset consists of recordings by 11 singers (5 Male, 6 Female) performing 9 ragas. Each singer has 2 alaps and 1 pakad recording per raga (with a few exceptions). This dataset is an expansion of the dataset [Raga Pose Estimation](https://github.com/DurhamARC/raga-pose-estimation) containing the recordings of 3 singers (AG/CC/SCh) singing the same 9 ragas. We refer to the singers in the earlier version of this dataset as Durham Singers (since the recording was done in Durham) and the rest of the singers as Pune Singers in our discussion below. 
+The dataset consists of recordings by 11 singers (5 Male, 6 Female) performing 9 ragas. Each singer has 2 alaps and 1 pakad recording per raga (with a few exceptions). This dataset is an expansion of the raga alap component of the dataset [Raga Pose Estimation](https://github.com/DurhamARC/raga-pose-estimation). The original raga alap dataset contains the audiovisual recordings of 3 singers (AG/CC/SCh) singing the same 9 ragas. We refer to the singers in the earlier version of this dataset as Durham Singers (since the recording was done in Durham) and the rest of the singers as Pune Singers in our discussion below. 
  
 
 |**Singer**|**Gender**|**Ragas**|**#Pakad**|**#Alap**|**Dur(min)**|
