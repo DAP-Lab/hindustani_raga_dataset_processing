@@ -195,7 +195,7 @@ The interpolated pitch contour will be saved as a csv file in OUTPUT\_FOLDER
 
 ### Part 1: From keypoints to time series
 
-1. We use OpenPose with front view camera only for 2D keypoint estimation and VideoPose3D with 3D keypoint estimation. This repository uses the output of OpenPose / VideoPose3D on the videos as input to the processing. This data is at frame rate (25 FPS for Durham singers, 24 FPS for Pune Singers).
+1. We use OpenPose with front view camera only for 2D keypoint estimation and VideoPose3D with 3D keypoint estimation. This repository uses the output of OpenPose / VideoPose3D on the videos as input to the processing. VideoPose3D processing utilises the Detectron 2D output of each of the 3 camera views to obtain 3D coordinates with reference to the front view. The data of 3D keypoints is therefore at the video frame rate (25 FPS for Durham singers, 24 FPS for Pune Singers).
 
    Note:  The different models do not have the same keypoints - this is shown in the columns "OpenPose (2D)" and "VideoPose3D" in the table below where "Y" indicates the keypoint (2D position) available in the corresponding model. In addition, the pre-trained model for VideoPose3D computes the depth for a subset of keypoints only. These are marked as "Y" in the column "VideoPose3D - has depth"
 
@@ -228,7 +228,7 @@ The interpolated pitch contour will be saved as a csv file in OUTPUT\_FOLDER
 | RHeel        | Y             | N           | N                      |
 
 2. We process the data and convert it to a time series for each of the key points.
-3. Nulls in data (based on confidence <0.3) are interpolated using linear interpolation.
+3. Nulls in data (based on rejecting keypoints with confidence <0.3) are interpolated using linear interpolation.
 4. For low-pass filtering, we use the Savitzky Golay (SavGol) filter. The window length of the filter is chosen to be 13 and the polynomial order to be 4.
 5. Resampling – the time series was resampled at 10ms using scipy.signal.resample which is an FFT-based resampling algorithm
 6. For each keypoint z-score normalization ($\frac{p -\mu}{\sigma}$) was done for the position $p$ per axis ($x,y,z$) using the mean $\mu$ and standard deviation $\sigma$ for that keypoint and axis across the entire recording. Z-score normalization was chosen since we want to retain the direction of motion concerning the mean position of the key point. Thus a positive z-score on the x-axis indicates a position to the right of the mean position and a negative z-score indicates a position to the left of the mean position. Similarly, a positive z-score on the y-axis indicates a position lower than the mean position whilst a negative z-score indicates a position above the mean position. For the z-axis, a positive score means towards the camera and a negative score means away from the front-facing camera.
