@@ -60,7 +60,8 @@ The dataset consists of recordings by 11 singers (5 Male, 6 Female) performing 9
 |SS|F|9|9|18|60|
 |**All**|**5M,6F**|**9**|**109**|**199**|**664**|
 
-Tonic per singer is present in text files in 00\_data/02\_singer\_specific\_tonic Following are the ragas used in the recordings. Some raga names are abbreviated.
+The tonic of each singer is provided in the text files in 00\_data/02\_singer\_specific\_tonic 
+Following are the ragas used in the recordings. Some raga names are abbreviated.
 
 | **Raga** | **#Pakad** | **#Alap** | **Duration** |
 |----------|------------|-----------|--------------|
@@ -75,7 +76,6 @@ Tonic per singer is present in text files in 00\_data/02\_singer\_specific\_toni
 | Shree | 12 | 22 | 75 |
 | **ALL** | **109** | **199** | **664** |
 
-For every singer, we also provide a tonic file containing the tonic for the singer. This is provided in 00\_data/02\_singer\_specific\_tonic
 
 ## Metadata for the recording
 
