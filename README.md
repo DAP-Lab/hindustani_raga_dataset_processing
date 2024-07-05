@@ -48,8 +48,11 @@ The image below shows the setup (not to scale) for the three cameras for the Pun
 approximately 55 degrees and the front and left camera is approximately 47 degrees. We refer to left and right camera based on
 the singer's point of view.
 
-|![Recording Setup for Pune Singers](cameraSetupPuneSingers.png)|
-| Recording setup                                               |
+<div align="center">
+  <img src="cameraSetupPuneSingers.png" alt="Recording Setup for Pune Singers">
+  <p>Recording setup</p>
+</div>
+
  
 
 |**Singer**|**Gender**|**Ragas**|**#Pakad**|**#Alap**|**Dur(min)**|
