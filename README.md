@@ -55,20 +55,21 @@ the singer's point of view.
 
  
 
-|**Abbreviation**|**Singer**|**Gender**|**Ragas**|**#Pakad**|**#Alap**|**Dur(min)**|
+| **Singer** | **Initials** | **Gender** | **Ragas** | **#Pakad** | **#Alap** | **Dur(min)** |
 | - | - | - | - | - | - | - |
-|AG|Apoorva Gokhale|F|9|9|17|54|
-|AK|Adwait Keskar|M|9|9|18|60|
-|AP|Adishri Pote|F|9|9|18|59|
-|CC|Chiranjeeb Chakraborty|M|9|10|18|71|
-|MG|Mandar Gadgil|M|9|9|18|58|
-|MP|Meher Paralikar|M|9|9|18|59|
-|NM|Nishad Matange|M|9|9|18|55|
-|RV|Rashika Varkat Garud|F|9|9|18|60|
-|SCh|Sudokshina Chatterjee|F|9|18|20|67|
-|SM|Shivani Marulkar Dassakar|F|9|9|18|60|
-|SS|Sawani Shikare|F|9|9|18|60|
-|||**5M,6F**|**9**|**109**|**199**|**664**|
+| Apoorva Gokhale | AG | F | 9 | 9 | 17 | 54 |
+| Adwait Keskar | AK | M | 9 | 9 | 18 | 60 |
+| Adishri Pote | AP | F | 9 | 9 | 18 | 59 |
+| Chiranjeeb Chakraborty | CC | M | 9 | 10 | 18 | 71 |
+| Mandar Gadgil | MG | M | 9 | 9 | 18 | 58 |
+| Meher Paralikar | MP | M | 9 | 9 | 18 | 59 |
+| Nishad Matange | NM | M | 9 | 9 | 18 | 55 |
+| Rashika Varkat Garud | RV | F | 9 | 9 | 18 | 60 |
+| Sudokshina Chatterjee | SCh | F | 9 | 18 | 20 | 67 |
+| Shivani Marulkar Dassakar | SM | F | 9 | 9 | 18 | 60 |
+| Sawani Shikare | SS | F | 9 | 9 | 18 | 60 |
+| | | **5M,6F** | **9** | **109** | **199** | **664** |
+
 
 
 The tonic of each singer is provided in the text files in 00\_data/02\_singer\_specific\_tonic  
