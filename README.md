@@ -68,7 +68,7 @@ the singer's point of view.
 |SCh|Sudokshina Chatterjee|F|9|18|20|67|
 |SM|Shivani Marulkar Dassakar|F|9|9|18|60|
 |SS|Sawani Shikare|F|9|9|18|60|
-|**All**||**5M,6F**|**9**|**109**|**199**|**664**|
+|||**5M,6F**|**9**|**109**|**199**|**664**|
 
 
 The tonic of each singer is provided in the text files in 00\_data/02\_singer\_specific\_tonic  
