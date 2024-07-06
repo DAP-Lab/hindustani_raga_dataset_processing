@@ -55,7 +55,7 @@ the singer's point of view.
 
  
 
-| **Singer** | **Initials** | **Gender** | **Ragas** | **#Pakad** | **#Alap** | **Dur(min)** |
+| **Singer Name** | **Initials** | **Gender** | **Ragas** | **#Pakad** | **#Alap** | **Dur(min)** |
 | - | - | - | - | - | - | - |
 | Apoorva Gokhale | AG | F | 9 | 9 | 17 | 54 |
 | Adwait Keskar | AK | M | 9 | 9 | 18 | 60 |
