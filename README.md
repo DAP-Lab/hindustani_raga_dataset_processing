@@ -55,20 +55,21 @@ the singer's point of view.
 
  
 
-|**Singer**|**Gender**|**Ragas**|**#Pakad**|**#Alap**|**Dur(min)**|
-| - | - | - | - | - | - |
-|AG|F|9|9|17|54|
-|AK|M|9|9|18|60|
-|AP|F|9|9|18|59|
-|CC|M|9|10|18|71|
-|MG|M|9|9|18|58|
-|MP|M|9|9|18|59|
-|NM|M|9|9|18|55|
-|RV|F|9|9|18|60|
-|SCh|F|9|18|20|67|
-|SM|F|9|9|18|60|
-|SS|F|9|9|18|60|
-|**All**|**5M,6F**|**9**|**109**|**199**|**664**|
+|**Abbreviation**|**Singer**|**Gender**|**Ragas**|**#Pakad**|**#Alap**|**Dur(min)**|
+| - | - | - | - | - | - | - |
+|AG|Apoorva Gokhale|F|9|9|17|54|
+|AK|Adwait Keskar|M|9|9|18|60|
+|AP|Adishri Pote|F|9|9|18|59|
+|CC|Chiranjeeb Chakraborty|M|9|10|18|71|
+|MG|Mandar Gadgil|M|9|9|18|58|
+|MP|Meher Paralikar|M|9|9|18|59|
+|NM|Nishad Matange|M|9|9|18|55|
+|RV|Rashika Varkat Garud|F|9|9|18|60|
+|SCh|Sudokshina Chatterjee|F|9|18|20|67|
+|SM|Shivani Marulkar Dassakar|F|9|9|18|60|
+|SS|Sawani Shikare|F|9|9|18|60|
+|**All**||**5M,6F**|**9**|**109**|**199**|**664**|
+
 
 The tonic of each singer is provided in the text files in 00\_data/02\_singer\_specific\_tonic  
 
