@@ -276,7 +276,7 @@ We take the Euclidean norm of the individual components of acceleration and refe
 
 ## Using processed master files
 
-If you wish to access directly the final processed master files - one per singer - please download the master files from [Data Archiving Project](http://tinyurl.com/3ykadrm5)
+If you wish to access directly the final processed master files - one per singer - please download the master files from [OSF Project](https://osf.io/qjkzs/files/osfstorage?view_only=). Choose either 03_master_files_2d or 04_master_files_3d folder as per your requirement.
 
 Below is a sample of the master file. Only columns for right wrist are shown here. There would be similar columns for left wrist and both elbows.
 
@@ -346,9 +346,9 @@ pip install -r requirements.txt
 ```
 ### Downloading the data
 
-You can download the videos for all singers and all views from [00_All_Videoes_All_Views](https://osf.io/qjkzs/files/osfstorage?view_only=). Note that you do NOT need the video mp4 files for the rest of the processing in this repository because we provide the pre-processed source separated audio and openpose/videopose output in the following link.
+You can download the videos for all singers and all views from [OSF Project - 00_All_Videoes_All_Views](https://osf.io/qjkzs/files/osfstorage?view_only=). Note that you do NOT need the video mp4 files for the rest of the processing in this repository because we provide the pre-processed source separated audio and openpose/videopose output in the following link.
 
-Download the pre-processed audio and video data from [Data Archiving Project](https://osf.io/qjkzs/files/googledrive?view_only=)
+Download the pre-processed audio and video data from [OSF Project](https://osf.io/qjkzs/files/googledrive?view_only=)
 
 Please place the data in the corresponding folders to the corresponding directory here.
 
