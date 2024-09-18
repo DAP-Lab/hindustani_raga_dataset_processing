@@ -355,8 +355,8 @@ Please place the data in the corresponding folders to the corresponding director
 | Folder Name               | Directory to be placed in          |
 |---------------------------|------------------------------------|
 | 01_Source_Separated_Audio | 03_audio_processing_data/01_source_separated_audio |
-| 04_openpose_output        | 01_openpose_output                     |
-| 05_videopose_output       | 01_videopose_output               |
+| 05_openpose_output        | 01_openpose_output                     |
+| 06_videopose_output       | 01_videopose_output               |
 
 You need to use EITHER the openpose output **OR** the videopose output depending on the setting in the next step.
 
