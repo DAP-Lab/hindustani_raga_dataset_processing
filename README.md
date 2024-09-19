@@ -48,7 +48,7 @@ The dataset consists of recordings by 11 singers (5 Male, 6 Female) performing 9
 
 The image below shows the setup (not to scale) for the three cameras for the Pune singers. The angle between the front and the right camera is
 approximately 55 degrees and the front and left camera is approximately 47 degrees. We refer to left and right camera based on
-the singer's point of view.
+the singer's point of view. Additionally, a separate high-quality microphone situated near the singer's mouth records the audio. 
 
 <div align="center">
   <img src="cameraSetupPuneSingers.png" alt="Recording Setup for Pune Singers">
@@ -108,7 +108,7 @@ Following are the ragas used in the recordings. Some raga names are abbreviated.
 
 ## Processing Flowcharts
 
-The repository can process both single-view and multiple-view recordings. The following diagrams show the processes for 2D and 3D. We use [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) for keypoint estimation from front view only and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D) for keypoint extraction from 3 views.
+The repository provides separate code pipelines for the audio input (obtained from the high quality microphone) and video input (the 3 video camera views). It can process both single-view and multiple-view recordings. The following diagrams show the processes for 2D and 3D. We use [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) for keypoint estimation from front view only and [VideoPose3D](https://github.com/facebookresearch/VideoPose3D) for keypoint extraction from 3 views.
 
 | ![Processing with front view camera only](Process2D.png) | ![Processing with all 3 view cameras](Process3D.png) |
 |:---------------------------------------------------------:|:----------------------------------------------------:|
@@ -123,15 +123,15 @@ For Pune singers (AK, AP, MG, MP, NM, RV, SM, SS), we used [**Spleeter Source se
 
 For Durham singers (AG, CC, SCh) we used [**Audacity Noise Removal**](https://manual.audacityteam.org/man/noise_reduction.html) (called ANR hereupon) – the parameters are mentioned in the following explanation
 
-This choice was made based on some trial and error. We had three choices for the source separation:
+This choice was made based on empirical observations, and trial and error. We had three choices for the source separation:
 
 1) Using Spleeter Only
 1) Using ANR only
 1) Using ANR followed by Spleeter (ANR+Spleeter)
 
-The drawback of using Spleeter was that some portion of the vocals was getting lost because of the aggressiveness of the source separation. The drawback of using ANR was that it was not as effective as Spleeter in removing the accompaniment (Tanpura). So we had to make the best of the tradeoff.
+The drawback of using Spleeter was that some portion of the vocals was getting lost because of the aggressiveness of the source separation. The drawback of using ANR was that it was not as effective as Spleeter in removing the accompaniment (Tanpura). 
 
-We noticed the following:
+We observed the following:
 
 **Pune Singers:**
 
@@ -193,7 +193,7 @@ Attenuation at ceiling: 0.03 for all
 The main steps in pitch extraction were:
 
 1) Parselmouth pitch extraction at 10 ms intervals on source-separated audio using the above parameter values
-1) Linear Interpolation of silences less than 400 ms
+2) Linear Interpolation across silent or unvoiced intervals of duration less than 400 ms
 
 The code for these steps is present in the file extract\_pitch\_contours.py
 
