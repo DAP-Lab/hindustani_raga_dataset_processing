@@ -193,13 +193,14 @@ Attenuation at ceiling: 0.03 for all
 The main steps in pitch extraction were:
 
 1) Parselmouth pitch extraction at 10 ms intervals on source-separated audio using the above parameter values
-2) Linear Interpolation across silent or unvoiced intervals of duration less than 400 ms
+2) Normalize pitch to cents using the tonic of the singer. Singer specific tonic information is present in ![Singer Specific Tonic](https://github.com/DAP-Lab/hindustani_raga_dataset_processing/tree/main/00_data/02_singer_specific_tonic)
+3) Linear Interpolation across silent or unvoiced intervals of duration less than 400 ms
 
 The code for these steps is present in the file extract\_pitch\_contours.py
 
 Instructions to run the script:
 
-1) In the file extract\_pitch\_contours.py, change the variables INPUT\_FOLDER, OUTPUT\_FOLDER and FILE according to your directory structure. INPUT\_FOLDER should contain the audio file that is to be pitch-extracted, and OUTPUT\_FOLDER should be a folder where the csv file of pitch contour is to be stored.
+1) In the file extract\_pitch\_contours.py, change the variables INPUT\_FOLDER, OUTPUT\_FOLDER and FILE according to your directory structure. INPUT\_FOLDER should contain the audio file that is to be pitch-extracted, and OUTPUT\_FOLDER should be a folder where the csv file of pitch contour is to be stored. It is recommended to use the values provided in the code.
 2) Run the script using the command:
    ```
    python extract\_pitch\_contours.py
