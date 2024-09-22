@@ -193,7 +193,7 @@ Attenuation at ceiling: 0.03 for all
 The main steps in pitch extraction were:
 
 1) Parselmouth pitch extraction at 10 ms intervals on source-separated audio using the above parameter values
-2) Normalize pitch to cents using the tonic of the singer. Singer specific tonic information is present in ![Singer Specific Tonic](https://github.com/DAP-Lab/hindustani_raga_dataset_processing/tree/main/00_data/02_singer_specific_tonic)
+2) Normalize pitch to cents using the tonic of the singer. Singer specific tonic information is present in [Singer Specific Tonic](https://github.com/DAP-Lab/hindustani_raga_dataset_processing/tree/main/00_data/02_singer_specific_tonic)
 3) Linear Interpolation across silent or unvoiced intervals of duration less than 400 ms
 
 The code for these steps is present in the file extract\_pitch\_contours.py
@@ -205,7 +205,7 @@ Instructions to run the script:
    ```
    python extract\_pitch\_contours.py
    ```
-The interpolated pitch contour will be saved as a csv file in ![02\_pitch\_contour\_dir](https://github.com/DAP-Lab/hindustani_raga_dataset_processing/tree/main/03_audio_processing_data/02_pitch_contour_dir)
+The interpolated pitch contour will be saved as a csv file in [02\_pitch\_contour\_dir](https://github.com/DAP-Lab/hindustani_raga_dataset_processing/tree/main/03_audio_processing_data/02_pitch_contour_dir)
 
 ## Video Time Series Processing
 
