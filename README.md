@@ -200,12 +200,12 @@ The code for these steps is present in the file extract\_pitch\_contours.py
 
 Instructions to run the script:
 
-1) In the file extract\_pitch\_contours.py, change the variables INPUT\_FOLDER, OUTPUT\_FOLDER and FILE according to your directory structure. INPUT\_FOLDER should contain the audio file that is to be pitch-extracted, and OUTPUT\_FOLDER should be a folder where the csv file of pitch contour is to be stored. It is recommended to use the values provided in the code.
-2) Run the script using the command:
+
+1) Run the script using the command:
    ```
    python extract\_pitch\_contours.py
    ```
-The interpolated pitch contour will be saved as a csv file in OUTPUT\_FOLDER
+The interpolated pitch contour will be saved as a csv file in ![02\_pitch\_contour\_dir](https://github.com/DAP-Lab/hindustani_raga_dataset_processing/tree/main/03_audio_processing_data/02_pitch_contour_dir)
 
 ## Video Time Series Processing
 
